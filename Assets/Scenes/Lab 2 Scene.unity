@@ -587,8 +587,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 0}
   speed: 500
-  scoreText: {fileID: 0}
-  winText: {fileID: 0}
+  ScoreText: {fileID: 1045610209}
+  WinText: {fileID: 132338600}
 --- !u!54 &424408799
 Rigidbody:
   m_ObjectHideFlags: 0
