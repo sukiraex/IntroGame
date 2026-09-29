@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     private int count;
     private int numPickups = 5; // Put here the number of pickups you have .
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI winText;
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI WinText;
 
     void OnMove(InputValue value) {
         moveValue = value.Get<Vector2>();
@@ -32,17 +32,18 @@ public class PlayerController : MonoBehaviour {
     }
     private void SetCountText()
     {
-        scoreText.text = " Score : " + count.ToString();
+        ScoreText.text = " Score : " + count.ToString();
         if (count >= numPickups)
         {
-            winText.text = " You win ! ";
-            }
+            ScoreText.text = "";
+            WinText.text = " You win!";
         }
+    }
 
     private void Start()
     {
         count = 0;
-        winText.text = "";
+        WinText.text = "";
         SetCountText();
     }
 }
