@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     public Vector2 moveValue;
     public float speed;
     private int count;
+
     void OnMove(InputValue value) {
         moveValue = value.Get<Vector2>();
     }
